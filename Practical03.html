@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="myApp" ng-init="Student ={fname='Tushar',lname='Yadav'}">
+        FirstName : <input type="text" ng-model="fname"/>
+        LastName : <input type="text" ng-model="lname"/>
+        <div>
+        FullName : {{fname + ' '+lname }}
+    </div>
+    </div>
+</div>
+    <script>
+        var app = angular.module('myApp',[]);
+        app.controller('myCtrl', function($scope) {
+            $scope.Student = {fname:'',lname:''};
+            });
+    </script>
+</body>
+</html>

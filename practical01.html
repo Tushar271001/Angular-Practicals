@@ -1,0 +1,43 @@
+<!-- //ng.app used to call application
+//ng.model --used to 
+//ng.blind -- used to gather all data
+ng.init---  used to  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+    <!-- <div ng-app="">
+        <p>Name : <input type="text" ng-model="nm"/></p>
+        <p ng-bind="nm"></p>
+    
+    <div ng-app="" ng-init="FirstName='Tushar'">
+        <p>Name =<span ng-bind="FirstName"></p>
+            <p>Name={{FirstName}}</p>
+    </div>
+    //call by expression
+    {{5+5}}   
+</div> -->
+<div ng-app="myApp">
+     
+    <p><input type="number" ng-model="qty"/></p>
+    <p>Quantity = {{qty}}</p>
+    <p><input type="number" ng-model="price"/></p>
+    <p>Price = {{price}}</p>
+    <p>Total={{qty*price}}</p>
+</div>
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('qtyCtrl', function($scope){
+        $scope.qty = 0;
+        $scope.price=0;
+            });
+</script>
+</body>
+</html>
